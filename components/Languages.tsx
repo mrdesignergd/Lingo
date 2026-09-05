@@ -15,7 +15,7 @@ export function Languages() {
     <section className="section languages-section" id="courses" aria-labelledby="languages-title">
       <div className="container">
         <div className="program-heading">
-          <div><span className="eyebrow">НАШИ ПРОГРАММЫ</span><h2 id="languages-title">Выберите язык</h2><span className="heading-stroke" aria-hidden="true" /></div>
+          <div><span className="eyebrow">НАШИ ПРОГРАММЫ</span><h2 id="languages-title">Выберите<span className="mobile-language-word"> свой</span> язык</h2><span className="heading-stroke" aria-hidden="true" /></div>
           <div className="program-intro"><p>Современные программы, живое общение<br />и культура каждой страны.</p><div className="slider-buttons" aria-hidden="true"><span><ArrowLeft /></span><span className="active"><ArrowRight /></span></div></div>
         </div>
         <div className="language-grid">

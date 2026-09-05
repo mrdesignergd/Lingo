@@ -101,18 +101,38 @@ export function LeadFormProvider({ children }: { children: ReactNode }) {
           {status === 'success' ? (
             <output className="lead-success">
               <CheckCircle2 aria-hidden="true" />
-              <DialogTitle>Заявка отправлена</DialogTitle>
+              <DialogTitle>
+                <span className="lead-success-title-desktop">Заявка отправлена</span>
+                <span className="lead-success-title-mobile">Спасибо!</span>
+              </DialogTitle>
               <DialogDescription>
-                Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее
-                время.
+                <span className="lead-success-description-desktop">
+                  Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее
+                  время.
+                </span>
+                <span className="lead-success-description-mobile">
+                  Ваша заявка отправлена.<br />Мы свяжемся с вами в ближайшее время.
+                </span>
               </DialogDescription>
+              <button
+                className="button lead-success-close"
+                type="button"
+                onClick={() => handleOpenChange(false)}
+              >
+                Закрыть
+              </button>
             </output>
           ) : (
             <>
               <DialogHeader>
                 <DialogTitle>Записаться на урок</DialogTitle>
                 <DialogDescription>
-                  Оставьте контакты — мы поможем подобрать подходящий курс.
+                  <span className="lead-description-desktop">
+                    Оставьте контакты — мы поможем подобрать подходящий курс.
+                  </span>
+                  <span className="lead-description-mobile">
+                    Оставьте свои данные, и мы свяжемся с вами в ближайшее время.
+                  </span>
                 </DialogDescription>
               </DialogHeader>
               <form className="lead-form" onSubmit={handleSubmit}>

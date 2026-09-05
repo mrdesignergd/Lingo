@@ -23,10 +23,22 @@ export function Hero() {
           <h1 id="hero-title">
             Языки
             <br />
-            открывают мир
+            <span className="hero-open-word">
+              открывают
+              <svg
+                className="mobile-yellow-stroke"
+                viewBox="0 0 250 18"
+                aria-hidden="true"
+              >
+                <path d="M4 11C61 3 157 5 245 10C167 13 78 17 7 13" />
+              </svg>
+            </span>
+            <span className="desktop-title-space"> </span>
+            <br className="mobile-title-break" />
+            мир
           </h1>
           <svg
-            className="yellow-stroke"
+            className="yellow-stroke desktop-yellow-stroke"
             viewBox="0 0 250 18"
             aria-hidden="true"
           >

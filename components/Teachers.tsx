@@ -11,7 +11,7 @@ export function Teachers() {
   return (
     <section className="section teachers-section" id="teachers" aria-labelledby="teachers-title">
       <div className="container">
-        <div className="teachers-heading"><div><span className="eyebrow">НАША КОМАНДА</span><h2 id="teachers-title">Преподаватели,<br />которые вдохновляют</h2><span className="heading-stroke teacher-stroke" aria-hidden="true" /></div><a href="#teachers">Все преподаватели <ArrowRight /></a></div>
+        <div className="teachers-heading"><div><span className="eyebrow">НАША КОМАНДА</span><h2 id="teachers-title"><span className="teacher-title-desktop">Преподаватели,<br />которые вдохновляют</span><span className="teacher-title-mobile">Вдохновляют<br />на большее</span></h2><span className="heading-stroke teacher-stroke" aria-hidden="true" /></div><a href="#teachers">Все преподаватели <ArrowRight /></a></div>
         <div className="teacher-grid">
           {teachers.map((teacher) => <article className="teacher-card" key={teacher.name}>
             <div className={`teacher-photo ${teacher.tone}`}><Image src={teacher.image} alt={`Преподаватель ${teacher.name}`} fill sizes="(max-width: 767px) 38vw, (max-width: 1199px) 20vw, 11vw" /></div>
@@ -19,6 +19,9 @@ export function Teachers() {
             <span className={`teacher-note ${teacher.tone}`} aria-hidden="true">{teacher.note.split('\n').map((line) => <span key={line}>{line}<br /></span>)}</span>
           </article>)}
         </div>
+        <a className="button teachers-mobile-link" href="#teachers">
+          Все преподаватели <ArrowRight aria-hidden="true" />
+        </a>
       </div>
     </section>
   );
